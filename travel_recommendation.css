@@ -1,0 +1,47 @@
+.company-icon-div {
+    padding: 1px;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+}
+
+#company-icon {
+    width: 40%;
+}
+
+.navigator div.inner-border {
+    border: 5px solid coral;
+}
+
+
+.navigator nav div.inner-border {
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigator nav ul {
+list-style-type: none;
+/* padding: 0; */
+}
+
+.navigator nav ul li{
+display: inline;
+margin-right: 10px;
+}
+
+.navigator li{
+    font-size: large;
+}
+
+.navigator nav a {
+text-decoration: none;
+color: #333;
+font-weight: lighter;   
+}
+
+.home-page {
+    background-image: url(https://images.pexels.com/photos/36694789/pexels-photo-36694789/free-photo-of-solitude-on-the-pristine-beach-of-kas-turkiye.jpeg?h=1000&w=1500&fit=crop);
+}
