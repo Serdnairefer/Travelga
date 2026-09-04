@@ -1,47 +1,82 @@
-.company-icon-div {
-    padding: 1px;
-    align-items: center;
-    font-family: 'Courier New', Courier, monospace;
-    display: flex;
-}
-
-#company-icon {
-    width: 40%;
+.navigator {
+    padding: 10px;
+    background-color: rgb(7, 7, 42);
 }
 
 .navigator div.inner-border {
-    border: 5px solid coral;
+    border: 5px solid rgb(96, 28, 3);
 }
 
 
 .navigator nav div.inner-border {
-    background-color: white;
-    padding: 10px;
+    background-color: rgb(7, 7, 42);
+    padding: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .navigator nav ul {
-list-style-type: none;
+    list-style-type: none;
 /* padding: 0; */
 }
 
 .navigator nav ul li{
 display: inline;
-margin-right: 10px;
+margin-right: 5px;
 }
 
-.navigator li{
+.navigator button {
+    background-color: coral;
+    border: none;
+    border-radius: 5px;
     font-size: large;
 }
 
-.navigator nav a {
-text-decoration: none;
-color: #333;
-font-weight: lighter;   
+.navigator button:hover {
+    background-color: gray;
+}
+
+.company-icon-div {
+    padding: 0px;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    color: white;
+    font-size: large;
+    
+}
+
+#company-icon {
+    width: 20%;
+    border-radius: 100%;
+}
+
+.quick-menu {
+    display: block;
+}
+
+.quick-menu li {
+    float: left;
+}
+
+.quick-menu a {
+    color: white;
+    text-align: center;
+    padding: 16px;
+    font-size: large;
+}
+
+.quick-menu a:hover {
+    background-color: white;
+    color: rgb(7, 7, 42);
+}
+
+.search-recommendation input{
+    font-size: 16px;
 }
 
 .home-page {
     background-image: url(https://images.pexels.com/photos/36694789/pexels-photo-36694789/free-photo-of-solitude-on-the-pristine-beach-of-kas-turkiye.jpeg?h=1000&w=1500&fit=crop);
 }
+
