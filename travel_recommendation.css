@@ -108,6 +108,18 @@ background: white;
 background: white;
 }
 
+#btnSubmit {
+background-color: rgb(30, 105, 77);
+border: none;
+border-radius: 5%;
+width: 25%;
+font-size: x-large;
+}
+
+#btnSubmit:hover {
+    background-color: gray;
+}
+
 .search-recommendation button:hover {
 transform: translateY(-2px);
 opacity: 0.9;
@@ -134,6 +146,12 @@ opacity: 0.9;
 .first-description, .second-description {
     flex: 1;
 }
+
+.second-description{
+    display: flex;
+    justify-content: center;
+}
+
 
 .social-media {
     flex: 0 0 100px;
@@ -168,6 +186,30 @@ opacity: 0.9;
     font-size: xx-large;
     color: black;
     font-family: 'Times New Roman', Times, serif;
+}
+
+.contact-us {
+    gap: 20px;
+    display: grid;
+    width: 70%;
+    font-size: x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+}
+
+.contact-us input , .contact-us textarea {
+    border-color: white;
+    border-width: 1px;
+    background-color: transparent;
+    border-style: solid;
+    border-radius: 5%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    font-size: x-large;
+}
+
+input::placeholder {
+    color: white;
 }
 
 body {
