@@ -4,7 +4,7 @@
 }
 
 .navigator div.inner-border {
-    border: 5px solid rgb(96, 28, 3);
+    border: 5px solid white;
 }
 
 
@@ -114,6 +114,15 @@ opacity: 0.9;
 }
 
 .home-page {
+    color: white;
+    
+}
+
+body {
     background-image: url(https://images.pexels.com/photos/36694789/pexels-photo-36694789/free-photo-of-solitude-on-the-pristine-beach-of-kas-turkiye.jpeg?h=1000&w=1500&fit=crop);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
