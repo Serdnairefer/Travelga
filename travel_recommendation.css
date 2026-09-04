@@ -26,17 +26,6 @@ display: inline;
 margin-right: 5px;
 }
 
-.navigator button {
-    background-color: coral;
-    border: none;
-    border-radius: 5px;
-    font-size: large;
-}
-
-.navigator button:hover {
-    background-color: gray;
-}
-
 .company-icon-div {
     padding: 0px;
     align-items: center;
@@ -64,7 +53,7 @@ margin-right: 5px;
     color: white;
     text-align: center;
     padding: 16px;
-    font-size: large;
+    font-size: larger;
 }
 
 .quick-menu a:hover {
@@ -72,8 +61,56 @@ margin-right: 5px;
     color: rgb(7, 7, 42);
 }
 
-.search-recommendation input{
-    font-size: 16px;
+.search-recommendation {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 5px;
+padding: 16px;
+margin: 20px auto;
+list-style: none;
+border-radius: 14px;
+box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+max-width: 650px;
+}
+
+.search-recommendation input {
+width: 260px;
+padding: 12px 16px;
+border: 2px solid #d9e2ec;
+border-radius: 25px;
+outline: none;
+font-size: 16px;
+transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-recommendation input:focus {
+border-color: #2f80ed;
+box-shadow: 0 0 0 3px rgba(47, 128, 237, 0.2);
+}
+
+.search-recommendation button {
+padding: 12px 20px;
+border: none;
+border-radius: 25px;
+color: black;
+font-size: 20px;
+font-weight: bold;
+cursor: pointer;
+transition: transform 0.2s, opacity 0.2s;
+}
+
+#btnSearch {
+background: white;
+}
+
+#rstSearch {
+background: white;
+}
+
+.search-recommendation button:hover {
+transform: translateY(-2px);
+opacity: 0.9;
 }
 
 .home-page {
