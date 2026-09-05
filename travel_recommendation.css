@@ -212,6 +212,35 @@ input::placeholder {
     color: white;
 }
 
+#recommendation-display {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    gap: 24px;
+    padding: 20px;
+}
+
+.recommendation-card {
+    overflow: hidden;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.recommendation-card img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.recommendation-content {
+    padding: 16px;
+}
+
+.recommendation-content h2 {
+    margin-top: 0;
+}
+
 body {
     background-image: url(https://images.pexels.com/photos/36694789/pexels-photo-36694789/free-photo-of-solitude-on-the-pristine-beach-of-kas-turkiye.jpeg?h=1000&w=1500&fit=crop);
     background-repeat: no-repeat;
@@ -219,4 +248,5 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
+
 

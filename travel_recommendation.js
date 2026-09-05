@@ -1,19 +1,65 @@
 const keyWords = {"beach": 0, "temple": 1, "countr": 2};
 const btnSearch = document.getElementById("btnSearch");
-btnSearch.addEventListener("click", getInputRecommendation);
+btnSearch.addEventListener("click", displayRecommendations);
 
+
+function displayRecommendations() {
+    const categoryIndex = getInputRecommendation();
+    const section = document.getElementById("recommendation-display");
+    section.innerHTML = "";
+    if (categoryIndex < 0) {
+        return;
+    }
+   
+    const travelJson = JSON.parse(getTravelRecommendation());
+
+    const categories = ["beaches", "temples", "countries"];
+    const category = categories[categoryIndex];
+    const recommendations = travelJson[category];
+    if (category != 3) {
+        recommendations.forEach((place) => {
+            const card = document.createElement("article");
+            card.className = "recommendation-card";
+
+            card.innerHTML = `
+                <img src="${place.imageUrl}" alt="${place.name}">
+                <div class="recommendation-content">
+                    <h2>${place.name}</h2>
+                    <p>${place.description}</p>
+                </div>
+            `;
+
+            section.appendChild(card);
+        });
+    } else {
+        let cities = recommendations.cities;
+        cities.forEach((place) => {
+            const card = document.createElement("article");
+            card.className = "recommendation-card";
+
+            card.innerHTML = `
+                <img src="${place.imageUrl}" alt="${place.name}">
+                <div class="recommendation-content">
+                    <h2>${place.name}</h2>
+                    <p>${place.description}</p>
+                </div>
+            `;
+
+            section.appendChild(card);
+        });
+    }
+}
 
 function getInputRecommendation() {
-    debugger;
     let userInput = document.getElementById("recommendation").value.trim();
     if ( userInput != "" ) {
-        const regex = "/beach|temple|countr/i";
-        let result = userInput.match(regex)
-        if ( typeof(result) != null ) {
-            console.log("Found recommendation");
+        const regex = RegExp("beach|temple|countr","i");
+        let result = userInput.match(regex);
+        if ( result !== null ) {
+            console.log(keyWords[result[0]]);
             return keyWords[result[0]];
         } else {
-            console.log("Foundn't recommendation");
+            console.log(result);
             return -1;
         }
     }
@@ -30,10 +76,10 @@ async function getTravelRecommendation() {
         
         const travelJson = await response.json()
         console.log(travelJson);
+        return travelJson;
 
     } catch (e) {
         console.error(e.message);
     }
-    return travelJson;
 }
 
