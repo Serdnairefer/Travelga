@@ -3,7 +3,7 @@ const btnSearch = document.getElementById("btnSearch");
 btnSearch.addEventListener("click", displayRecommendations);
 
 
-function displayRecommendations() {
+async function displayRecommendations() {
     const categoryIndex = getInputRecommendation();
     const section = document.getElementById("recommendation-display");
     section.innerHTML = "";
@@ -11,7 +11,8 @@ function displayRecommendations() {
         return;
     }
    
-    const travelJson = JSON.parse(getTravelRecommendation());
+    const stringJson = await getTravelRecommendation();
+    const travelJson = JSON.parse(stringJson);
 
     const categories = ["beaches", "temples", "countries"];
     const category = categories[categoryIndex];
@@ -67,6 +68,7 @@ function getInputRecommendation() {
 
 //Retrieve JSON contents
 async function getTravelRecommendation() {
+    debugger;
     const URL = "./travel_recommendation_api.json";
     try {
         const response = await fetch(URL);
@@ -76,7 +78,7 @@ async function getTravelRecommendation() {
         
         const travelJson = await response.json()
         console.log(travelJson);
-        return travelJson;
+        return JSON.stringify(travelJson);
 
     } catch (e) {
         console.error(e.message);
