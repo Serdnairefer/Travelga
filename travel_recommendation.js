@@ -1,12 +1,20 @@
 const keyWords = {"beach": 0, "temple": 1, "countr": 2};
 const btnSearch = document.getElementById("btnSearch");
+const btnClear = document.getElementById("rstSearch");
+
 btnSearch.addEventListener("click", displayRecommendations);
+btnClear.addEventListener("click", clearRecommendation)
+
+
+function clearRecommendation() {
+    document.getElementById("recommendation-display").innerHTML = "";
+}
 
 
 async function displayRecommendations() {
     const categoryIndex = getInputRecommendation();
     const section = document.getElementById("recommendation-display");
-    section.innerHTML = "";
+    clearRecommendation(section);
     if (categoryIndex < 0) {
         return;
     }
@@ -17,7 +25,7 @@ async function displayRecommendations() {
     const categories = ["beaches", "temples", "countries"];
     const category = categories[categoryIndex];
     const recommendations = travelJson[category];
-    if (category != 3) {
+    if (category != "countries") {
         recommendations.forEach((place) => {
             const card = document.createElement("article");
             card.className = "recommendation-card";
@@ -33,20 +41,22 @@ async function displayRecommendations() {
             section.appendChild(card);
         });
     } else {
-        let cities = recommendations.cities;
-        cities.forEach((place) => {
-            const card = document.createElement("article");
-            card.className = "recommendation-card";
-
-            card.innerHTML = `
-                <img src="${place.imageUrl}" alt="${place.name}">
-                <div class="recommendation-content">
-                    <h2>${place.name}</h2>
-                    <p>${place.description}</p>
-                </div>
-            `;
-
-            section.appendChild(card);
+        recommendations.forEach((country) => {
+            let cities = country.cities;
+            cities.forEach((city) => {
+            
+                const card = document.createElement("article");
+                card.className = "recommendation-card";
+    
+                card.innerHTML = `
+                    <img src="${city.imageUrl}" alt="${city.name}">
+                    <div class="recommendation-content">
+                        <h2>${city.name}</h2>
+                        <p>${city.description}</p>
+                    </div>
+                `;
+                section.appendChild(card);
+            });
         });
     }
 }
