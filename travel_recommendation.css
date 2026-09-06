@@ -125,6 +125,11 @@ transform: translateY(-2px);
 opacity: 0.9;
 }
 
+.index {
+    font-size: xx-large;
+    color: white;
+}
+
 .home-page {
     color: white;
     padding: 20px;

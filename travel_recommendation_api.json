@@ -27,7 +27,7 @@
           },
           {
             "name": "Kyoto, Japan",
-            "imageUrl": "enter_your_image_for_kyoto.jpg",
+            "imageUrl": "https://www.advantour.com/img/japan/images/tokyo.jpg",
             "description": "Known for its historic temples, gardens, and traditional tea houses."
           }
         ]
@@ -53,13 +53,13 @@
       {
         "id": 1,
         "name": "Angkor Wat, Cambodia",
-        "imageUrl": "enter_your_image_for_angkor-wat.jpg",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Angkor_Wat.jpg/1280px-Angkor_Wat.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
         "description": "A UNESCO World Heritage site and the largest religious monument in the world."
       },
       {
         "id": 2,
         "name": "Taj Mahal, India",
-        "imageUrl": "enter_your_image_for_taj-mahal.jpg",
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Taj_Mahal_%28Edited%29.jpeg/1280px-Taj_Mahal_%28Edited%29.jpeg?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
         "description": "An iconic symbol of love and a masterpiece of Mughal architecture."
       }
     ],
